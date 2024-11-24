@@ -8,33 +8,21 @@ typedef struct Aeronave
     int horario;
     int tipo;
     int emergencia;
-    int prioridade = (1000 - combustivel) + (1440 - horario) + 500 *(tipo) + 5000 *(emergencia)   ;
+    int prioridade ;
 } Aeronave;
 
-typedef struct No
-{
-    Aeronave aeronave;
-    struct No* esquerda;
-    struct No* direita;
+Aeronave calcular_prioridade (Aeronave aeronave);
 
-}No;
+void inserir_aeronave();
 
+void carregar_aeronaves();
 
-/*
+void consultar_mprioridade();
 
-void consultar_prioridade ()
+void remover_mprioridade();
 
+void atualizar_prioridade();
 
-No* criar_no(int valor) {
-
-    char[50] identificador;
-    float combustível
-    No* novo_no = (No*)malloc(sizeof(No));
-    novo_no->valor = valor;
-    novo_no->esquerda = NULL;
-    novo_no->direita = NULL;
-    return novo_no;
-}
-*/
+void exibir();
 
 #endif
