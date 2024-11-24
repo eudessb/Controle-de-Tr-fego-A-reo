@@ -26,7 +26,12 @@ void inserir_aeronave(Aeronave aeronave)
         i = (i-1)/2;
     }
 };
-
+//99% de certeza que está errada/é desnecessária.
+Aeronave calcular_prioridade(Aeronave aeronave)
+{
+    aeronave.prioridade =  (1000  - aeronave.combustivel) + (1440 - aeronave.horario) + 500 *(aeronave.tipo) + 5000 *(aeronave.emergencia);
+    return aeronave;
+}
 void carregarAeronaves(char csvfile);
 
 void consultar_mprioridade();
