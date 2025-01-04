@@ -17,7 +17,7 @@ typedef struct Aeronave
 typedef struct HEAP
 {
     Aeronave *aeronaves;
-    int tamanho_maximo;
+    int tamanho_inicial;
     int tamanho_atual;
 } HEAP;
 
@@ -29,7 +29,7 @@ void calcular_prioridade(Aeronave *aeronave);
 
 void trocar_elementos(Aeronave *a, Aeronave *b);
 
-HEAP *inicializar_heap(int tamanho_array);
+HEAP *inicializar_heap();
 
 void inserir_aeronave(HEAP *heap, Aeronave *nova_aeronave);
 
@@ -41,8 +41,9 @@ void remover_mprioridade(HEAP *heap);
 
 void atualizar_prioridade(HEAP *heap);
 
-void esvaziar(HEAP *heap);
+void esvaziar_heap(HEAP *heap);
 
 void exibir(HEAP *heap);
 
+void exibir_menu();
 #endif
